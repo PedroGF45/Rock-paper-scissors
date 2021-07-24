@@ -8,31 +8,39 @@
     <body>
         <div id="main">
             <h1>A simple Rock Paper Scissors game</h1>
-            <p>Choose wisely!</p>
+            <p id="status">Choose wisely!</p>
             <div id="results">
                 <div id="myResult">
                     <ul>
                         <li><a>Your result</a></li>
-                        <li><a>0</a></li>
+                        <li><a id="playerScore">0</a></li>
                     </ul>
                 </div>
                 <div id="computerResult">
                     <ul>
                         <li><a>Computer's result</a></li>
-                        <li><a>0</a></li>
+                        <li><a id="computerScore">0</a></li>
                     </ul>
                 </div> 
             </div>
+            <div id="computerSelection">
+                <i class="fas fa-robot"></i> 
+            </div>
             <div id="pick">
-                <div class="img">
-                    <i class="far fa-hand-rock"></i>
-                </div>
-                <div class="img">
-                    <i class="far fa-hand-paper"></i>
-                </div>
-                <div class="img">
-                    <i class="far fa-hand-scissors"></i>
-                </div>
+                <a id="rock" href="#">
+                    <div class="img">
+                        <i class="far fa-hand-rock"></i>
+                    </div>
+                </a>
+                <a id="paper" href="#">
+                    <div class="img paper">
+                        <i class="far fa-hand-paper"></i>
+                    </div>
+                <a id="scissors" href="#">    
+                    <div class="img scissors">
+                        <i class="far fa-hand-scissors"></i>
+                    </div>
+                </a>
             </div>
         </div>
         <script src="scripts/scripts.js"></script>
