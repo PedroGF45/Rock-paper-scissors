@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif, serif;
+    background-color: black;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+}
+
+#results, #pick {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    padding: 5px;
+}
+
+#pick {
+    display: flex;
+    justify-content: space-between;
+    max-width: 25%;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.img {
+    border: 1px solid white;
+    padding: 50px;
+    margin: 0;
+}
+
+.img:hover {
+    box-shadow: 0px 0px 3px 3px;
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
+}
+
+.far {
+    transform: scale(5);
+}
