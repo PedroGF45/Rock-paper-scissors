@@ -58,34 +58,40 @@ function computerSelectionOnScreen() {
 //Check Score
 
 function isWin() {
-    if (playerScore == 5) {
-                document.getElementById("status").innerHTML = "YOU WON THE GAME. CONGRATULATIONS.";
+    if (playerScore == 1) {
+                document.getElementById("status").textContent = "YOU WON THE GAME. CONGRATULATIONS.";
+                const btn = document.createElement("button");
+                document.getElementById("tryAgain").appendChild(btn);
+                btn.style.cssText = "width: 50px; border-radius: 10px; height: 20px;";
                 playerScore = 0;
                 computerScore = 0;
     } else if (computerScore == 5) {
-                document.getElementById("status").innerHTML = "YOU LOST THE GAME. TRY AGAIN.";
+                document.getElementById("status").textContent = "YOU LOST THE GAME. TRY AGAIN.";
                 playerScore = 0;
                 computerScore = 0;
     } 
 }
 
-
+function game() {
+    computerSelection = computerPlay();
+    gamePlay(playerSelection, computerSelection);
+}
 
 //Select rock or paper or scissors through the image
-document.getElementById("rock").onclick = function () {
+const pickRock = document.getElementById("rock");
+pickRock.addEventListener("click", function() {
     playerSelection = "rock";
-    computerSelection = computerPlay();
-    gamePlay(playerSelection, computerSelection);
-}
+    game();
+});
 
-document.getElementById("paper").onclick = function () {
+const pickPaper = document.getElementById("paper");
+pickPaper.addEventListener("click", function() {
     playerSelection = "paper";
-    computerSelection = computerPlay();
-    gamePlay(playerSelection, computerSelection);
-}
+    game();
+});
 
-document.getElementById("scissors").onclick = function () {
+const pickScissors = document.getElementById("scissors");
+pickScissors.addEventListener("click", function() {
     playerSelection = "scissors";
-    computerSelection = computerPlay();
-    gamePlay(playerSelection, computerSelection);
-}
+    game();
+});

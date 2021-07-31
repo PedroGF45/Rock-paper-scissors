@@ -39,8 +39,8 @@ li {
 #pick {
     display: flex;
     justify-content: space-between;
-    max-width: 25%;
-    margin: auto;
+    max-width: 600px;
+    margin: 0 auto;
     margin-top: 150px;
     text-decoration: none;
 }
